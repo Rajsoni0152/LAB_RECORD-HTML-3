@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Defined Functions</title>
+</head>
+<body>
+
+<h2>Simple User-Defined Functions & Scope</h2>
+
+<p id="out"></p>
+
+<script>
+// User-defined function
+function greet() {
+    return "Hello from function!";
+}
+
+// User-defined function for sum
+function add(a, b) {
+    return a + b;
+}
+
+let text = "";
+
+// Function call
+text += greet() + "<br>";
+text += "Sum = " + add(4, 6) + "<br><br>";
+
+// Scope demonstration
+var x = 10;
+let y = 20;
+const z = 30;
+
+text += "var x = " + x + "<br>";
+text += "let y = " + y + "<br>";
+text += "const z = " + z;
+
+document.getElementById("out").innerHTML = text;
+</script>
+
+</body>
+</html>
